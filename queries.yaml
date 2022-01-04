@@ -1,0 +1,47 @@
+id_key :
+    id : ../keys/mydb.id
+    key : ../keys/my.key
+    
+d : {
+    "filter":
+    {
+        "property": "tag",
+        "select": {
+            "equals": "today"
+        }
+    }
+    ,
+    "sorts": [
+        {
+            "timestamp": "created_time",
+            "direction": "descending"
+        }
+    ]
+}
+
+q : {
+    "properties": {
+        "tag": {
+            "select": {
+                "name": 'None'
+            }
+        }
+    }
+}
+
+w : {
+    "filter":
+        {
+            "property": "tag",
+            "select": {
+                "equals": "Issues/News"
+            }
+        }
+    ,
+    "sorts": [
+            {
+                "timestamp": "created_time",
+                "direction": "descending"
+        }
+    ]
+}

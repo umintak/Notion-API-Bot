@@ -1,0 +1,47 @@
+id_key :
+    id : ../keys/db.id
+    key : ../keys/molpax.key
+
+d : {
+    "filter":
+    {
+        "property": "Daily Stand-up",
+        "select": {
+            "equals": "What will I do today"
+        }
+    }
+    ,
+    "sorts": [
+        {
+            "timestamp": "created_time",
+            "direction": "descending"
+        }
+    ]
+}
+
+q : {
+    "properties": {
+        "Daily Stand-up": {
+            "select": {
+                "name": 'What I did yesterday'
+            }
+        }
+    }
+}
+
+w : {
+    "filter":
+        {
+            "property": "Daily Stand-up",
+            "select": {
+                "equals": "Issues/News"
+            }
+        }
+    ,
+    "sorts": [
+            {
+                "timestamp": "created_time",
+                "direction": "descending"
+        }
+    ]
+}
